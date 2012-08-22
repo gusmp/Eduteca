@@ -1,0 +1,34 @@
+{% extends '::layout.html.twig' %}
+
+{% block container %}
+
+<form class="form-horizontal">
+    
+
+    <fieldset>
+        <legend>{% trans %}register.title{% endtrans %}</legend>
+    </fieldset>
+    
+    <div class="alert alert-success">
+        {% trans %}register.registration_success %name% {% endtrans %}
+    </div>
+    
+    <p>
+        {% trans %}register.final_comments {% endtrans %}
+    </p>
+
+    
+    <div class="form-actions">
+        <div class="row">
+            <div class="span4 offset4">
+                <a class="btn" href="{{ path('home') }}"><i class="icon-arrow-left"></i> {% trans %}register.back{% endtrans %}</a>
+            </div>
+        </div>
+    </div>
+    
+</form>
+
+{% endblock %}
+
+
+

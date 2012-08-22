@@ -1,0 +1,60 @@
+parameters:
+#    eduteca.example.class: Eduteca\EdutecaBundle\Example
+
+
+services:
+#    eduteca.example:
+#        class: %eduteca.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
+
+# Logging
+    service.logger:
+        class: Symfony\Bridge\Monolog\Logger
+        arguments: [app]
+        calls:
+             - [pushHandler, [@service.logger_handler]]
+
+    # Second parameter of arguments filter your logs: 
+    # INFO  200
+    # ERROR 400
+    # See Monolog::Logger
+    service.logger_handler:
+        class: Monolog\Handler\StreamHandler       
+        arguments: [%kernel.logs_dir%/%kernel.environment%.eduteca.log]
+#        formatter: monolog.formatter.session_request
+
+# Repositories
+    courseRepository:
+        class: Eduteca\EdutecaBundle\Repository\impl\CourseRepositoryImpl
+        arguments: [@doctrine.orm.entity_manager, @service.logger]
+        
+    contentRepository:
+        class: Eduteca\EdutecaBundle\Repository\impl\ContentRepositoryImpl
+        arguments: [@doctrine.orm.entity_manager, @service.logger, @courseRepository]
+        
+    userRepository:
+        class: Eduteca\EdutecaBundle\Repository\impl\UserRepositoryImpl
+        arguments: [@doctrine.orm.entity_manager, @service.logger, @security.encoder_factory]
+        
+    groupRepository:
+        class: Eduteca\EdutecaBundle\Repository\impl\GroupRepositoryImpl
+        arguments: [@doctrine.orm.entity_manager, @service.logger, @security.encoder_factory]
+
+# Services
+    courseService:
+        class: Eduteca\EdutecaBundle\Service\impl\CourseServiceImpl
+        arguments: [@courseRepository]
+
+    contentService:
+        class: Eduteca\EdutecaBundle\Service\impl\ContentServiceImpl
+        arguments: [@contentRepository]
+
+    groupService:
+        class: Eduteca\EdutecaBundle\Service\impl\GroupServiceImpl
+        arguments: [@groupRepository]
+        
+    userService:
+        class: Eduteca\EdutecaBundle\Service\impl\UserServiceImpl
+        arguments: [@userRepository, @groupService]
+        
+

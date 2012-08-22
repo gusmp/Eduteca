@@ -1,0 +1,54 @@
+{% extends '::layoutAdmin.html.twig' %}
+
+{% block container %}
+
+    <form action="{{ path('loginAdmin_check') }}" method="POST" class="form-horizontal">
+        
+        <fieldset>
+            <legend>{% trans %}admin.login.title{% endtrans %}</legend>
+            
+            {% if error %}
+                <div class="alert alert-error">
+                    {{ error.message }}
+                </div>
+            {% endif %}
+        
+            <div class="row">
+                <div class="span4 offset4">
+                    <div class="control-group">
+                        <label for="username" class="control-label" >{% trans %}admin.login.form.login{% endtrans %}</label>
+
+                        <div class="controls">
+                            <input class="input-xlarge focused" type="text" id="username" name="_username" value="{{ last_username }}" />
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label for="password" class="control-label" >{% trans %}admin.login.form.password{% endtrans %}</label>
+
+                        <div class="controls">
+                            <input class="input-xlarge focused" type="password" id="password" name="_password" />
+                        </div>
+                    </div>
+
+                    {#
+                    <input type="hidden" name="_target_path" value="" />
+                    #}
+                </div>
+            </div>
+                        
+            <div class="form-actions">
+                <div class="row">
+                    <div class="span4 offset4">
+                        <button type="submit" class="btn btn-primary">{% trans %}admin.login.submit{% endtrans %}</button>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+
+    </form>
+
+{% endblock %}
+
+
+

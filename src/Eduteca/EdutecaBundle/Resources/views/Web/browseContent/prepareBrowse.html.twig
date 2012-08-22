@@ -1,0 +1,62 @@
+{% extends '::layout.html.twig' %}
+
+{% block container %}
+
+
+<form class="form-horizontal" method="post" action="{{ path('browseContent') }}" enctype="multipart/form-data">
+    
+    <fieldset>
+        <legend>{% trans %}search.title{% endtrans %}</legend>
+
+        <div class="row">
+            <div class="span4 offset4">
+    
+                <div class="control-group">
+                    <label class="control-label" for="focusedInput">{% trans %}search.form.course{% endtrans %}</label>
+                    <div class="controls">
+                        <select id="form_course_courseId" name="form[course.courseId]">
+
+                            <option id="" value="" >{% trans %}search.form.no_filter{% endtrans %}</option>
+                            {% for course in courseList %}
+                            <option id="{{ course.courseId}}" value="{{ course.courseId}}" >{{ course.courseName }}</option>
+                            {% endfor %}
+
+                        </select>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="focusedInput">{% trans %}search.form.title{% endtrans %}</label>
+                    <div class="controls">
+
+                    <input class="input-xlarge focused" id="form_title" name="form[title]" type="text" />
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="focusedInput">{% trans %}search.form.description{% endtrans %}</label>
+                    <div class="controls">
+                    <input class="input-xlarge focused" id="form_description" name="form[description]" type="text" />
+                    </div>
+                </div>
+            </div>
+        </div>        
+        
+        <div class="form-actions">
+            <div class="row">
+                <div class="span4 offset4">
+                    <a class="btn" href="{{ path('home') }}"><i class="icon-arrow-left"></i>{% trans %}search.back{% endtrans %}</a>
+                    <button type="submit" class="btn btn-primary">{% trans %}search.find{% endtrans %}</button>
+                </div>
+             </div>
+        </div>
+    </fieldset>
+</form>
+
+
+
+
+{% endblock %}
+
+
+

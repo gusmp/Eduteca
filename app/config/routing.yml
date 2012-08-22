@@ -1,0 +1,4 @@
+EdutecaBundle:
+    resource: "@EdutecaBundle/Resources/config/routing.yml"
+    prefix:   /
+

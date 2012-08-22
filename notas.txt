@@ -1,0 +1,75 @@
+Limpiar cache
+=============
+php app/console cache:clear --env=dev --no-debug
+
+Ejecucion tests
+===============
+phpunit -c app/ -v src/Eduteca/EdutecaBundle/Tests/Service
+
+
+Generar modelo de datos
+=======================
+CREATE DATABASE `eduteca` /*!40100 CHARACTER SET utf8 COLLATE utf8_spanish_ci */;
+php app/console doctrine:schema:update --force
+
+Validacion modelo
+=================
+http://www.sencha.com/forum/showthread.php?135732-Ext-4-Validating-a-Form-with-a-Model
+
+
+Layout anchor
+=============
+
+Ext.onReady(function() {
+    Ext.create('Ext.Viewport', {
+        layout:'anchor',
+        items:[{
+            title:'Item 1',
+            html:'100% 20%',
+            anchor:'100% 20%'
+        },{
+            title:'Item 2',
+            html:'50% 30%',
+            anchor:'50% 30%'
+        },{
+            title:'Item 3',
+            html:'-100 50%',
+            anchor:'-100 50%'
+        }]
+    });
+});
+
+Filtros store
+=============
+
+store.filters.add('filtersId', new Ext.util.Filter({
+  property: 'property_to_filter',
+  value: 'value'
+});
+store.load();
+to remove filter use:
+
+store.filters.removeAtKey('filtersId');
+
+Parametros constructor
+======================
+
+var MyWindowClass = Ext.extend(Ext.Window, {
+    initComponent: function() {
+        var bar = this.params.foo + 1;
+        Ext.apply(this, {
+            title: 'bar = ' + bar
+            // some else customization
+        });
+        MyWindow.superclass.initComponent.call(this);
+    }
+});
+var MyWindow = new MyWindowClass({params: {foo: 1}});
+
+i8n
+===
+
+http://dev.sencha.com/deploy/ext-4.0.0/examples/locale/multi-lang.html
+http://dev.sencha.com/deploy/ext-4.0.0/examples/locale/multi-lang.html
+
+

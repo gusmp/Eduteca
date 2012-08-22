@@ -1,0 +1,77 @@
+{% extends '::layout.html.twig' %}
+
+{% block container %}
+
+<form class="form-horizontal" method="post" action="{{ path('uploadContent') }}" enctype="multipart/form-data">
+    
+
+    <fieldset>
+        <legend>{% trans %}upload.title{% endtrans %}</legend>
+        
+        {% if title %}
+            <div class="alert alert-error">
+                {% trans %}upload.err.duplicated.title{% endtrans %}
+            </div>
+        {% endif %}
+        
+        <div class="row">
+            <div class="span4 offset4">
+                <div class="control-group">
+                    {{ form_label(form.courseId, null, { 'label': 'upload.form.course', 'attr': {'class': 'control-label'} }) }}
+
+                    <div class="controls">
+                        {{ form_widget(form.courseId, { 'attr': {'class': 'input-xlarge focused'} }) }}
+                    </div>
+                    {{ form_errors(form.courseId) }}
+                </div>
+
+                <div class="control-group">
+                    {{ form_label(form.title, null, { 'label': 'upload.form.title', 'attr': {'class': 'control-label'} }) }}
+
+                    <div class="controls">
+                        {{ form_widget(form.title, { 'attr': {'class': 'input-xlarge focused'} }) }}
+                    </div>
+                    {{ form_errors(form.title) }}
+                </div>
+
+                <div class="control-group">
+                    {{ form_label(form.description, null, { 'label': 'upload.form.description', 'attr': {'class': 'control-label'} }) }}
+
+                    <div class="controls">
+                        {{ form_widget(form.description, { 'attr': {'class': 'input-xlarge focused'} }) }}
+                    </div>
+                    {{ form_errors(form.description) }}
+                </div>
+
+                <div class="control-group">
+                    {{ form_label(form.file, null, { 'label': 'upload.form.file', 'attr': {'class': 'control-label'} }) }}
+
+                    <div class="controls">
+                        {{ form_widget(form.file, { 'attr': {'class': 'input-xlarge focused'} }) }}
+                    </div>
+                    {{ form_errors(form.file) }}
+                </div>
+
+                {{ form_rest(form) }}
+            </div>
+        </div>
+                
+        <div class="form-actions">
+            <div class="row">
+                <div class="span4 offset4">
+                    <a class="btn" href="{{ path('home') }}"><i class="icon-arrow-left"></i>{% trans %}upload.back{% endtrans %}</a>
+                    <button type="submit" class="btn btn-primary">{% trans %}upload.upload{% endtrans %}</button>
+                </div>
+            </div>
+        </div>
+        
+    </fieldset>
+        
+</form>
+
+
+
+{% endblock %}
+
+
+

@@ -1,0 +1,447 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="es" datatype="plaintext" original="file.ext">
+        <body>
+            <!-- common -->
+            <trans-unit id="1">
+                <source>app.title</source>
+                <target>La web de Eduteca</target>
+            </trans-unit>
+            
+            <trans-unit id="2">
+                <source>app.footer</source>
+                <target><![CDATA[&copy;]]> Eduteca 2012</target>
+            </trans-unit>
+            
+            
+            <!-- header -->
+            <trans-unit id="100">
+                <source>header.home</source>
+                <target>Eduteca</target>
+            </trans-unit>
+            <trans-unit id="101">
+                <source>header.search</source>
+                <target>Buscar contenido</target>
+            </trans-unit>
+            <trans-unit id="102">
+                <source>header.upload</source>
+                <target>Subir contenido</target>
+            </trans-unit>
+            <trans-unit id="103">
+                <source>header.register</source>
+                <target>Registrate</target>
+            </trans-unit>
+            <trans-unit id="104">
+                <source>header.about</source>
+                <target>Sobre Eduteca</target>
+            </trans-unit>
+            <trans-unit id="105">
+                <source>header.login</source>
+                <target>Acceder</target>
+            </trans-unit>
+            <trans-unit id="106">
+                <source>header.personalMenu.title</source>
+                <target>Opciones</target>
+            </trans-unit>
+            <trans-unit id="107">
+                <source>header.personalMenu.logout</source>
+                <target>Salir</target>
+            </trans-unit>
+            <trans-unit id="108">
+                <source>header.personalMenu.user</source>
+                <target>Editar usuario</target>
+            </trans-unit>
+            <trans-unit id="109">
+                <source>header.personalMenu.delete</source>
+                <target>Borrar usuario</target>
+            </trans-unit> 
+            
+            
+            <!-- home -->
+            <trans-unit id="1000">
+                <source>home.slogan</source>
+                <target>Eduteca. El portal de compartición de contenidos</target>
+            </trans-unit>
+            
+            <trans-unit id="1001">
+                <source>home.search</source>
+                <target>Buscar contenido</target>
+            </trans-unit>
+            <trans-unit id="1002">
+                <source>home.search.description</source>
+                <target>Busca el contenido que estabas buscando y que nunca encontrastes.</target>
+            </trans-unit>
+            <trans-unit id="1003">
+                <source>home.search.more</source>
+                <target>Ver mas</target>
+            </trans-unit>
+            
+            <trans-unit id="1004">
+                <source>home.upload</source>
+                <target>Subir contenidos</target>
+            </trans-unit>
+            <trans-unit id="1005">
+                <source>home.upload.description</source>
+                <target>Comparte tus contenidos con el resto de la comunidad.</target>
+            </trans-unit>
+            <trans-unit id="1006">
+                <source>home.upload.more</source>
+                <target>Ver mas</target>
+            </trans-unit>
+            
+            <trans-unit id="1007">
+                <source>home.register</source>
+                <target>Unete a la comunidad</target>
+            </trans-unit>
+            <trans-unit id="1008">
+                <source>home.register.description</source>
+                <target>Seguro que tienes mucho que decir. Únete y comparte!</target>
+            </trans-unit>
+            <trans-unit id="1009">
+                <source>home.register.more</source>
+                <target>Ver mas</target>
+            </trans-unit>
+            
+            <trans-unit id="1010">
+                <source>home.carousel.option1.title</source>
+                <target>Title 1</target>
+            </trans-unit>
+            <trans-unit id="1011">
+                <source>home.carousel.option1.description</source>
+                <target>Description 1</target>
+            </trans-unit>
+            
+            <trans-unit id="1012">
+                <source>home.carousel.option2.title</source>
+                <target>Title 2</target>
+            </trans-unit>
+            <trans-unit id="1013">
+                <source>home.carousel.option2.description</source>
+                <target>Description 2</target>
+            </trans-unit>
+            
+            <trans-unit id="1014">
+                <source>home.carousel.option3.title</source>
+                <target>Title 3</target>
+            </trans-unit>
+            <trans-unit id="1015">
+                <source>home.carousel.option3.description</source>
+                <target>Description 3</target>
+            </trans-unit>
+            
+            <!-- search -->
+            <trans-unit id="1100">
+                <source>search.title</source>
+                <target>Búsqueda de contenidos</target>
+            </trans-unit>
+            <trans-unit id="1101">
+                <source>search.form.course</source>
+                <target>Curso</target>
+            </trans-unit>
+            <trans-unit id="1102">
+                <source>search.form.title</source>
+                <target>Título</target>
+            </trans-unit>
+            <trans-unit id="1103">
+                <source>search.form.description</source>
+                <target>Descripción</target>
+            </trans-unit>
+            <trans-unit id="1104">
+                <source>search.back</source>
+                <target>Volver</target>
+            </trans-unit>
+            <trans-unit id="1105">
+                <source>search.find</source>
+                <target>Buscar contenidos</target>
+            </trans-unit>
+            
+            <trans-unit id="1106">
+                <source>search.results.title</source>
+                <target>Título</target>
+            </trans-unit>
+            <trans-unit id="1107">
+                <source>search.results.title</source>
+                <target>Resultados de la búsqueda</target>
+            </trans-unit>
+            <trans-unit id="1108">
+                <source>search.results.table.title</source>
+                <target>Título</target>
+            </trans-unit>
+            <trans-unit id="1109">
+                <source>search.results.table.description</source>
+                <target>Descripción</target>
+            </trans-unit>
+            <trans-unit id="1110">
+                <source>search.results.table.course</source>
+                <target>Curso</target>
+            </trans-unit>
+            <trans-unit id="1111">
+                <source>search.results.table.link</source>
+                <target>Enlace al contenido</target>
+            </trans-unit>
+            <trans-unit id="1112">
+                <source>search.results.no.results</source>
+                <target>No se encontró ningún resultado</target>
+            </trans-unit>
+            <trans-unit id="1113">
+                <source>search.form.no_filter</source>
+                <target>Todos los cursos</target>
+            </trans-unit>
+
+            <!-- about -->
+            <trans-unit id="1200">
+                <source>about.title</source>
+                <target>Sobre Eduteca</target>
+            </trans-unit>
+            <trans-unit id="1201">
+                <source>about.mainText</source>
+                <target>Texto descripcion aplicacion</target>
+            </trans-unit>
+            <trans-unit id="1202">
+                <source>about.back</source>
+                <target>Volver</target>
+            </trans-unit>
+            
+            <!-- upload -->
+            <trans-unit id="1300">
+                <source>upload.title</source>
+                <target>Subir contenido</target>
+            </trans-unit>
+            <trans-unit id="1301">
+                <source>upload.form.course</source>
+                <target>Curso</target>
+            </trans-unit>
+            <trans-unit id="1302">
+                <source>upload.form.title</source>
+                <target>Título</target>
+            </trans-unit>
+            <trans-unit id="1303">
+                <source>upload.form.description</source>
+                <target>Descripción</target>
+            </trans-unit>
+            <trans-unit id="1304">
+                <source>upload.form.description</source>
+                <target>Descripción</target>
+            </trans-unit>
+            <trans-unit id="1305">
+                <source>upload.form.file</source>
+                <target>Fichero</target>
+            </trans-unit>
+            <trans-unit id="1306">
+                <source>upload.back</source>
+                <target>Volver</target>
+            </trans-unit>
+            <trans-unit id="1307">
+                <source>upload.upload</source>
+                <target>Subir</target>
+            </trans-unit>
+            <trans-unit id="1308">
+                <source>upload.upload_success %title%</source>
+                <target>El contenido '%title%' ha sido subido con éxito</target>
+            </trans-unit>
+            <trans-unit id="1309">
+                <source>upload.final_comments</source>
+                <target>El contenido ha sido dado de alta, pero no está activo hasta que el administrador lo valide</target>
+            </trans-unit>
+            <trans-unit id="1310">
+                <source>upload.err.duplicated.title</source>
+                <target>Ya existe un contenido con ese título vinculado al curso</target>
+            </trans-unit>
+
+            <!-- register user -->
+            <trans-unit id="1400">
+                <source>register.title</source>
+                <target>Nuevo usuario</target>
+            </trans-unit>
+            
+            <trans-unit id="1401">
+                <source>register.form.login</source>
+                <target>Login</target>
+            </trans-unit>
+            <trans-unit id="1402">
+                <source>register.form.password</source>
+                <target>Contraseña</target>
+            </trans-unit>
+            <trans-unit id="1403">
+                <source>register.form.password_verification</source>
+                <target>Verificación de la contraseña</target>
+            </trans-unit>
+            <trans-unit id="1404">
+                <source>register.form.name</source>
+                <target>Nombre</target>
+            </trans-unit>
+            <trans-unit id="1405">
+                <source>register.form.surname1</source>
+                <target>Primer apellido</target>
+            </trans-unit>
+            <trans-unit id="1406">
+                <source>register.form.surname2</source>
+                <target>Segundo apellido</target>
+            </trans-unit>
+            <trans-unit id="1407">
+                <source>register.form.email</source>
+                <target>Dirección de correo electrónico</target>
+            </trans-unit>
+            <trans-unit id="1408">
+                <source>register.back</source>
+                <target>Volver</target>
+            </trans-unit>
+            <trans-unit id="1409">
+                <source>register.register</source>
+                <target>Registrar usuario</target>
+            </trans-unit>
+            <trans-unit id="1410">
+                <source>register.registration_success %name%</source>
+                <target>El usuario '%name%' ha sido dado con éxito</target>
+            </trans-unit>
+            <trans-unit id="1411">
+                <source>register.final_comments</source>
+                <target>El usuario ha sido dado de alta, pero no está activo hasta que el administrador lo valide</target>
+            </trans-unit>
+            <trans-unit id="1412">
+                <source>register.error_password</source>
+                <target>La contraseña y su confirmación no coinciden</target>
+            </trans-unit>
+            <trans-unit id="1413">
+                <source>register.form.captcha</source>
+                <target>Palabra de verificación</target>
+            </trans-unit>
+            <trans-unit id="1414">
+                <source>register.err.duplicated.login</source>
+                <target>El login ya está en uso</target>
+            </trans-unit>
+
+            <!-- edit user -->
+            <trans-unit id="1500">
+                <source>edit.title</source>
+                <target>Editar usuario</target>
+            </trans-unit>
+            
+            <trans-unit id="1501">
+                <source>edit.form.login</source>
+                <target>Login</target>
+            </trans-unit>
+            <trans-unit id="1502">
+                <source>edit.form.password</source>
+                <target>Contraseña</target>
+            </trans-unit>
+            <trans-unit id="1503">
+                <source>edit.form.password_verification</source>
+                <target>Verificación de la contraseña</target>
+            </trans-unit>
+            <trans-unit id="1504">
+                <source>edit.form.name</source>
+                <target>Nombre</target>
+            </trans-unit>
+            <trans-unit id="1505">
+                <source>edit.form.surname1</source>
+                <target>Primer apellido</target>
+            </trans-unit>
+            <trans-unit id="1506">
+                <source>edit.form.surname2</source>
+                <target>Segundo apellido</target>
+            </trans-unit>
+            <trans-unit id="1507">
+                <source>edit.form.email</source>
+                <target>Dirección de correo electrónico</target>
+            </trans-unit>
+            <trans-unit id="1508">
+                <source>edit.back</source>
+                <target>Volver</target>
+            </trans-unit>
+            <trans-unit id="1509">
+                <source>edit.update</source>
+                <target>Modificar usuario</target>
+            </trans-unit>
+            
+            <trans-unit id="1510">
+                <source>edit.edit_success %name%</source>
+                <target>El usuario '%name%' ha sido modificado con éxito</target>
+            </trans-unit>
+            <trans-unit id="1511">
+                <source>edit.final_comments</source>
+                <target>El usuario ha sido modificado</target>
+            </trans-unit>
+            <trans-unit id="1512">
+                <source>edit.error_password</source>
+                <target>La contrasña y su confirmación no coinciden</target>
+            </trans-unit>
+            <trans-unit id="1513">
+                <source>edit.form.captcha</source>
+                <target>Palabra de verificación</target>
+            </trans-unit>
+            <trans-unit id="1514">
+                <source>edit.err.duplicated.login</source>
+                <target>El login ya está en uso</target>
+            </trans-unit>
+
+            <!-- login -->
+            <trans-unit id="1600">
+                <source>login.title</source>
+                <target>Acceso a Eduteca</target>
+            </trans-unit>
+            <trans-unit id="1601">
+                <source>login.form.login</source>
+                <target>Login</target>
+            </trans-unit>
+            <trans-unit id="1602">
+                <source>login.form.password</source>
+                <target>Contraseña</target>
+            </trans-unit>
+            <trans-unit id="1603">
+                <source>login.back</source>
+                <target>Volver</target>
+            </trans-unit>
+            <trans-unit id="1604">
+                <source>login.submit</source>
+                <target>Acceder</target>
+            </trans-unit>
+            
+            
+            <!-- container -->
+
+            
+            <!-- Administration -->
+            
+            <!-- login -->
+            <trans-unit id="4000">
+                <source>admin.login.title</source>
+                <target>Acceso al portal de administración de Eduteca</target>
+            </trans-unit>
+            <trans-unit id="4001">
+                <source>admin.login.form.login</source>
+                <target>Login</target>
+            </trans-unit>
+            <trans-unit id="4002">
+                <source>admin.login.form.password</source>
+                <target>Contraseña</target>
+            </trans-unit>
+            <trans-unit id="4003">
+                <source>admin.login.back</source>
+                <target>Volver</target>
+            </trans-unit>
+            <trans-unit id="4004">
+                <source>admin.login.submit</source>
+                <target>Acceder</target>
+            </trans-unit>
+            
+            <!-- errors course -->
+            <trans-unit id="4100">
+                <source>admin.error.duplicate.course %courseName%</source>
+                <target>El curso '%courseName%' ya existe.</target>
+            </trans-unit>
+            
+            <trans-unit id="4200">
+                <source>admin.error.duplicate.content %title%</source>
+                <target>El contenido '%title%' ya existe.</target>
+            </trans-unit>
+            
+            <trans-unit id="4300">
+                <source>admin.error.duplicate.user %login%</source>
+                <target>El usuario '%login%' ya existe.</target>
+            </trans-unit>
+            
+
+        </body>
+    </file>
+</xliff>

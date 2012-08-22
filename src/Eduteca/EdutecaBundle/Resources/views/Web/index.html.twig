@@ -1,0 +1,89 @@
+{% extends '::layout.html.twig' %}
+
+{% block container %}
+      
+      
+<!-- center -->
+<div class="hero-unit">
+
+    <div id="myCarousel" class="carousel slide">
+        <!-- Carousel items -->
+        <div class="carousel-inner">
+            
+            <div class="item active">
+                <img alt="" src="{{ asset('bundles/eduteca/web/images/libros1.jpg') }}"  />
+                <div class="carousel-caption">
+                    <h4> {% trans %}home.carousel.option1.title{% endtrans %} </h4>
+                    <p> {% trans %}home.carousel.option1.description{% endtrans %} </p>
+                </div>
+            </div>
+            
+            <div class="item">
+                <img alt="" src="{{ asset('bundles/eduteca/web/images/libros2.jpg') }}"  />
+                <div class="carousel-caption">
+                    <h4> {% trans %}home.carousel.option2.title{% endtrans %} </h4>
+                    <p> {% trans %}home.carousel.option2.description{% endtrans %} </p>
+                </div>
+            </div>
+            
+            <div class="item ">
+                <img alt="" src="{{ asset('bundles/eduteca/web/images/librerias.jpg') }}"  />
+                <div class="carousel-caption">
+                    <h4> {% trans %}home.carousel.option3.title{% endtrans %} </h4>
+                    <p> {% trans %}home.carousel.option3.description{% endtrans %} </p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Carousel nav -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+    </div> 
+</div>
+
+<!-- center -->
+      
+<!-- main options -->
+<div class="row">
+  <div class="span4">
+    <h2>{% trans %}home.search{% endtrans %}</h2>
+    <p>
+      {% trans %}home.search.description{% endtrans %}
+    </p>
+    <p>
+      <a class="btn btn-info" href="{{ path('prepareBrowseContent') }}">{% trans %}home.search.more{% endtrans %}</a>
+    </p>
+  </div>
+        
+  <div class="span4">
+    <h2>{% trans %}home.upload{% endtrans %}</h2>
+    <p>
+      {% trans %}home.upload.description{% endtrans %}
+    </p>
+    <p>
+      <a class="btn btn-info" href="{{ path('prepareUploadContent') }}">{% trans %}home.upload.more{% endtrans %}</a>
+    </p>
+  </div>
+  
+  <div class="span4">
+    <h2>{% trans %}home.register{% endtrans %}</h2>
+    <p>
+      {% trans %}home.register.description{% endtrans %}
+    </p>
+    <p>
+      <a class="btn btn-info" href="{{ path('prepareRegisterUser') }}">{% trans %}home.register.more{% endtrans %}</a>
+    </p>
+  </div>
+        
+</div>
+
+<script type="text/javascript">
+    $('.carousel').carousel();
+</script>
+
+
+{% endblock %}
+
+
+
+

@@ -1,0 +1,65 @@
+# Web
+
+# Security
+
+login:
+    pattern: /login
+    defaults: { _controller: Eduteca\EdutecaBundle\Controller\Security\SecurityController::loginAction }   
+
+login_check:
+    pattern: /login_check
+
+logout:
+    pattern: /logout
+
+# Application
+
+prepareBrowseContent:
+    pattern:  /prepareBrowse
+    defaults: { _controller: Eduteca\EdutecaBundle\Controller\Web\BrowseContentController::prepareBrowseAction }
+
+browseContent:
+    pattern:  /browse
+    defaults: { _controller: Eduteca\EdutecaBundle\Controller\Web\BrowseContentController::browseAction }
+
+getContent:
+    pattern:  /getContent/{contentId}
+    defaults: { _controller: Eduteca\EdutecaBundle\Controller\Web\BrowseContentController::getContentAction }
+    requirements:
+      contentId: \d+
+    
+prepareUploadContent:
+    pattern:  /prepareUpload
+    defaults: { _controller: Eduteca\EdutecaBundle\Controller\Web\UploadContentController::prepareUploadAction }
+    
+uploadContent:
+    pattern:  /upload
+    defaults: { _controller: Eduteca\EdutecaBundle\Controller\Web\UploadContentController::uploadAction }
+
+prepareRegisterUser:
+    pattern:  /prepareRegister
+    defaults: { _controller: Eduteca\EdutecaBundle\Controller\Web\UserController::prepareRegisterUserAction }
+    
+registerUser:
+    pattern:  /register
+    defaults: { _controller: Eduteca\EdutecaBundle\Controller\Web\UserController::registerUserAction }
+
+prepareEditUser:
+    pattern:  /prepareEdit
+    defaults: { _controller: Eduteca\EdutecaBundle\Controller\Web\UserController::prepareEditUserAction }
+    
+editUser:
+    pattern:  /edit
+    defaults: { _controller: Eduteca\EdutecaBundle\Controller\Web\UserController::editUserAction }
+
+deleteUser:
+    pattern:  /delete
+    defaults: { _controller: Eduteca\EdutecaBundle\Controller\Web\UserController::deleteUserAction }
+
+
+aboutEduteca:
+    pattern:  /about
+    defaults: { _controller: Eduteca\EdutecaBundle\Controller\Web\AboutEdutecaController::aboutEdutecaAction }
+
+
+

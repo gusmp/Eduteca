@@ -1,0 +1,28 @@
+# Web
+
+# Security
+
+mobileWebHome:
+    pattern:  /mobile
+    defaults: { _controller: Eduteca\EdutecaBundle\Controller\MobileWeb\MobileWebController::mobileWebAction }
+
+
+mobileWebUser:
+    pattern:  /mobile/user/{userId}
+    defaults: { _controller: Eduteca\EdutecaBundle\Controller\MobileWeb\MobileWebController::mobileWebUserAction, userId:0 }
+    requirements:
+        userId: \d+
+        _method: GET|POST|PUT
+        _format: json    
+
+mobileWebCourseList:
+    pattern:  /mobile/courseList
+    defaults: { _controller: Eduteca\EdutecaBundle\Controller\MobileWeb\MobileWebController::mobileWebCourseListAction }
+    requirements:
+        _method: GET
+
+mobileWebContentList:
+    pattern:  /mobile/contentList
+    defaults: { _controller: Eduteca\EdutecaBundle\Controller\MobileWeb\MobileWebController::mobileWebContentListAction }
+    requirements:
+        _method: GET

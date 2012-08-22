@@ -1,0 +1,97 @@
+{% extends '::layout.html.twig' %}
+
+{% block container %}
+
+<form class="form-horizontal" method="post" action="{{ path('editUser') }}" enctype="multipart/form-data">
+    
+
+    <fieldset>
+        <legend>{% trans %}edit.title{% endtrans %}</legend>
+        
+        {% if errors %}
+            <div class="alert alert-error">
+                {% trans %}edit.err.duplicated.login{% endtrans %}
+            </div>
+        {% endif %}
+        
+        <div class="row">
+            <div class="span4 offset4">
+                <div class="control-group">
+                    {{ form_label(form.login, null, { 'label': 'edit.form.login', 'attr': {'class': 'control-label'} }) }}
+
+                    <div class="controls">
+                        {{ form_widget(form.login, { 'attr': {'class': 'input-xlarge focused'} }) }}
+                    </div>
+                    {{ form_errors(form.login) }}
+                </div>
+
+                <div class="control-group">
+                    {{ form_label(form.password, null, { 'label': 'edit.form.password', 'attr': {'class': 'control-label'} }) }}
+
+                    <div class="controls">
+                        {{ form_widget(form.password, { 'attr': {'class': 'input-xlarge focused'} }) }}
+                        <span class="help-inline">
+                        {{ form_errors(form.password) }}
+                        </span>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    {{ form_label(form.name, null, { 'label': 'edit.form.name', 'attr': {'class': 'control-label'} }) }}
+
+                    <div class="controls">
+                        {{ form_widget(form.name, { 'attr': {'class': 'input-xlarge focused'} }) }}
+                    </div>
+                    {{ form_errors(form.name) }}
+                </div>
+
+                <div class="control-group">
+                    {{ form_label(form.surname1, null, { 'label': 'edit.form.surname1', 'attr': {'class': 'control-label'} }) }}
+
+                    <div class="controls">
+                        {{ form_widget(form.surname1, { 'attr': {'class': 'input-xlarge focused'} }) }}
+                    </div>
+                    {{ form_errors(form.surname1) }}
+                </div>
+
+                <div class="control-group">
+                    {{ form_label(form.surname2, null, { 'label': 'edit.form.surname2', 'attr': {'class': 'control-label'} }) }}
+
+                    <div class="controls">
+                        {{ form_widget(form.surname2, { 'attr': {'class': 'input-xlarge focused'} }) }}
+                    </div>
+                    {{ form_errors(form.surname2) }}
+                </div>
+
+                <div class="control-group">
+                    {{ form_label(form.email, null, { 'label': 'edit.form.email', 'attr': {'class': 'control-label'} }) }}
+
+                    <div class="controls">
+                        {{ form_widget(form.email, { 'attr': {'class': 'input-xlarge focused'} }) }}
+                    </div>
+                    {{ form_errors(form.email) }}
+                </div>
+
+                {{ form_rest(form) }}
+            </div>
+        </div>
+        
+        <div class="form-actions">
+            <div class="row">
+                <div class="span4 offset4">
+                    <a class="btn" href="{{ path('home') }}"><i class="icon-arrow-left"></i>{% trans %}edit.back{% endtrans %}</a>
+                    <button type="submit" class="btn btn-primary">{% trans %}edit.update{% endtrans %}</button>
+                </div>
+            </div>
+        </div>
+        
+    </fieldset>
+        
+</form>
+
+
+
+{% endblock %}
+
+
+

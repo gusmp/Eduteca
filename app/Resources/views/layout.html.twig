@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>{% trans %}app.title{% endtrans %}</title>
+    <meta name="description" content="Eduteca">
+    <meta name="author" content="Eduteca">
+    <!--[if lt IE 9]>
+      <script src="{{ asset('bundles/eduteca/web/js/html5.js') }}" type="text/javascript"></script>
+    <![endif]-->
+    <link href="{{ asset('bundles/eduteca/web/css/bootstrap.css') }}" type="text/css" rel="stylesheet" />
+    <style>
+      body { padding-top: 60px; }
+    </style>
+    
+    <link href="{{ asset('bundles/eduteca/web/css/bootstrap-responsive.css') }}" type="text/css" rel="stylesheet" />
+    
+  </head>
+  <body>
+    <script src="{{ asset('bundles/eduteca/web/js/jquery.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('bundles/eduteca/web/js/bootstrap.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('bundles/eduteca/web/js/bootstrap-tooltip.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('bundles/eduteca/web/js/bootstrap-popover.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('bundles/eduteca/web/js/bootstrap-carousel.js') }}" type="text/javascript"></script>
+    
+    <!-- navigation bar -->
+    <div class="navbar navbar-fixed-top">
+      {% block header %}
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="{{ path('home') }}">{% trans %}header.home{% endtrans %}</a>
+          <ul class="nav">
+            <li><a href="{{ path('prepareBrowseContent') }}"> {% trans %}header.search{% endtrans %} </a></li>
+            <li><a href="{{ path('prepareUploadContent') }}">{% trans %}header.upload{% endtrans %}</a></li>
+            <li><a href="{{ path('prepareRegisterUser') }}">{% trans %}header.register{% endtrans %}</a></li>
+            <li><a href="{{ path('aboutEduteca') }}">{% trans %}header.about{% endtrans %}</a></li>
+          </ul>
+          <ul class="nav pull-right">
+            {% if is_granted('ROLE_USER') %}
+                <!--<li><a href="{{ path('logout') }}">{% trans %}header.logout{% endtrans %}</a></li>-->
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">{% trans %}header.personalMenu.title{% endtrans %}<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="{{ path('prepareEditUser') }}">{% trans %}header.personalMenu.user{% endtrans %}</a></li>
+                      <li><a href="{{ path('deleteUser') }}">{% trans %}header.personalMenu.delete{% endtrans %}</a></li>
+                      <li class="divider"></li>
+                      <li><a href="{{ path('logout') }}">{% trans %}header.personalMenu.logout{% endtrans %}</a></li>
+                   </ul>
+                </li>
+            {% else %}
+                <li><a href="{{ path('login') }}">{% trans %}header.login{% endtrans %}</a></li>
+            {% endif %}
+          </ul>
+        </div>
+      </div>
+      {% endblock %}
+    </div>
+    <!-- navigation bar -->
+    
+    <!-- container -->
+    <div class="container-fluid">
+      
+      <!-- body -->      
+      {% block container %}
+      {% endblock %}
+      
+
+      <!-- footer -->
+      <footer>
+        {% block footer %}
+        <p>{% trans %}app.footer{% endtrans %}</p>
+        {% endblock %}
+      </footer>
+      
+    </div>
+    <!-- container -->
+    
+  </body>
+</html>
+
+
+

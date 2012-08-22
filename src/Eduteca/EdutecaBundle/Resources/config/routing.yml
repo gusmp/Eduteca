@@ -1,0 +1,19 @@
+home:
+    pattern:  /
+    defaults: { _controller: EdutecaBundle:Home:index }
+  
+
+# Users
+EdutecaBundle_web:
+    resource: "@EdutecaBundle/Resources/config/routing_web.yml"
+    prefix:   /
+
+# Administrators
+EdutecaBundle_admin:
+    resource: "@EdutecaBundle/Resources/config/routing_admin.yml"
+    prefix:   /
+
+# Mobile web for users
+EdutecaBundle_mobileWeb:
+    resource: "@EdutecaBundle/Resources/config/routing_mobileWeb.yml"
+    prefix:   /

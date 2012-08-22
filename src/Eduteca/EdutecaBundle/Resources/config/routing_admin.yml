@@ -1,0 +1,90 @@
+# Administration
+
+# Security
+
+loginAdmin:
+    pattern: /loginAdmin
+    defaults: { _controller: Eduteca\EdutecaBundle\Controller\Security\SecurityController::loginAdminAction }   
+
+loginAdmin_check:
+    pattern: /admin/login_check
+
+logoutAdmin:
+    pattern: /admin/logout
+
+
+# Application
+
+adminHome:
+    pattern:  /admin
+    defaults: { _controller: Eduteca\EdutecaBundle\Controller\Admin\AdminController::adminAction }
+
+# course
+courseController:
+    pattern: /admin/course/{courseId}
+    defaults: { _controller: Eduteca\EdutecaBundle\Controller\Admin\CourseController::courseAction, courseId:0 }
+    requirements:
+        courseId: \d+
+        _method: GET|POST|PUT|DELETE
+        _format: json
+
+courseListController:
+    pattern: /admin/courseList
+    defaults: { _controller: Eduteca\EdutecaBundle\Controller\Admin\CourseController::courseListAction }
+    requirements:
+        _method: GET
+
+# content
+contentDeleteController:
+    pattern: /admin/content/{contentId}
+    defaults: { _controller: Eduteca\EdutecaBundle\Controller\Admin\ContentController::contentDeleteAction, contentId:0 }
+    requirements:
+        courseId: \d+
+        _method: DELETE
+        _format: json
+
+contentListController:
+    pattern: /admin/contentList
+    defaults: { _controller: Eduteca\EdutecaBundle\Controller\Admin\ContentController::contentListAction }
+    requirements:
+        _method: GET
+
+contentAddController:
+    pattern: /admin/contentAdd
+    defaults: { _controller: Eduteca\EdutecaBundle\Controller\Admin\ContentController::contentAddAction }
+    requirements:
+        _method: POST
+
+contentUpdateController:
+    pattern: /admin/contentUpdate
+    defaults: { _controller: Eduteca\EdutecaBundle\Controller\Admin\ContentController::contentUpdateAction }
+    requirements:
+        _method: POST
+
+contentDownloadController:
+    pattern: /admin/contentDownload/{contentId}
+    defaults: { _controller: Eduteca\EdutecaBundle\Controller\Admin\ContentController::contentDownloadAction, contentId:0 }
+    requirements:
+        courseId: \d+
+
+# user
+userController:
+    pattern: /admin/user/{userId}
+    defaults: { _controller: Eduteca\EdutecaBundle\Controller\Admin\UserController::userAction, userId:0 }
+    requirements:
+        courseId: \d+
+        _method: POST|PUT|DELETE
+        _format: json
+
+userListController:
+    pattern: /admin/userList
+    defaults: { _controller: Eduteca\EdutecaBundle\Controller\Admin\UserController::userListAction }
+    requirements:
+        _method: GET
+
+# groups
+groupListController:
+    pattern: /admin/groupList
+    defaults: { _controller: Eduteca\EdutecaBundle\Controller\Admin\GroupController::groupListAction }
+    requirements:
+        _method: GET

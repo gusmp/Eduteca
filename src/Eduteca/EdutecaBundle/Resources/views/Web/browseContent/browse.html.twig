@@ -1,0 +1,56 @@
+{% extends '::layout.html.twig' %}
+
+{% block container %}
+
+<form class="form-horizontal">
+
+    <fieldset>
+        <legend>{% trans %}search.results.title{% endtrans %}</legend>
+
+        {% if contentList|length == 0 %}
+            <div class="alert alert-info">
+                {% trans %}search.results.no.results{% endtrans %}
+            </div>
+        {% endif %}
+        
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>{% trans %}search.results.table.title{% endtrans %}</th>
+                    <th>{% trans %}search.results.table.description{% endtrans %}</th>
+                    <th>{% trans %}search.results.table.course{% endtrans %}</th>
+                    <th>{% trans %}search.results.table.link{% endtrans %}</th>
+                </tr>
+
+            </thead>
+            <tbody>
+                {% for content in contentList %}
+                <tr>
+                    <td>{{ content.title}} </td>
+                    <td>{{ content.description}} </td>
+                    <td>{{ content.course.courseName}} </td>
+                    <td> 
+                        <a href="{{ path('getContent', { 'contentId': content.contentId }) }}">
+                            <i class="icon-book"> {{ content.file}}  </i>
+                        </a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <div class="form-actions">
+            <div class="row">
+                <div class="span4 offset4">
+                    <a class="btn" href="{{ path('prepareBrowseContent') }}"><i class="icon-arrow-left"></i> {% trans %}search.back{% endtrans %}</a>
+                </div>
+            </div>
+        </div>
+        
+    </fieldset>
+</form>
+
+{% endblock %}
+
+
+

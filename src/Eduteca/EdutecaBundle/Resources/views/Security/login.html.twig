@@ -1,0 +1,56 @@
+{% extends '::layout.html.twig' %}
+
+{% block container %}
+
+    <form action="{{ path('login_check') }}" method="POST" class="form-horizontal">
+        
+        <fieldset>
+            <legend>{% trans %}login.title{% endtrans %}</legend>
+            
+            {% if error %}
+                <div class="alert alert-error">
+                    {{ error.message }}
+                </div>
+           {% endif %}
+            
+            <div class="row">
+                <div class="span4 offset4">
+
+                    <div class="control-group">
+                        <label for="username" class="control-label" >{% trans %}login.form.login{% endtrans %}</label>
+
+                        <div class="controls">
+                            <input class="input-xlarge focused" type="text" id="username" name="_username" value="{{ last_username }}" />
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label for="password" class="control-label" >{% trans %}login.form.password{% endtrans %}</label>
+
+                        <div class="controls">
+                            <input class="input-xlarge focused" type="password" id="password" name="_password" />
+                        </div>
+                    </div>
+
+                    {#
+                    <input type="hidden" name="_target_path" value="" />
+                    #}
+                </div>
+            </div>
+                    
+            <div class="form-actions">
+                <div class="row">
+                    <div class="span4 offset4">
+                        <a class="btn" href="{{ path('home') }}"><i class="icon-arrow-left"></i>{% trans %}login.back{% endtrans %}</a>
+                        <button type="submit" class="btn btn-primary">{% trans %}login.submit{% endtrans %}</button>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+
+    </form>
+
+{% endblock %}
+
+
+
