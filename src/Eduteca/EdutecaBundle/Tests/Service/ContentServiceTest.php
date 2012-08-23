@@ -39,6 +39,11 @@ class ContentServiceTest extends ContainerAwareUnitTestCase
     private $pathTest = 'pathTest';
     
     /**
+     * @var type string
+     */
+    private $dateTest; 
+    
+    /**
      * @var type boolean
      */
     private $publishedTest = true;
@@ -48,6 +53,8 @@ class ContentServiceTest extends ContainerAwareUnitTestCase
         $this->setUpBeforeClass();
         $this->contentService = $this->get('contentService');
         $this->courseService = $this->get('courseService');
+        $this->userService = $this->get('userService');
+        $this->dateTest = new \DateTime("now");
     }
     
     public function testContent()
@@ -66,10 +73,9 @@ class ContentServiceTest extends ContainerAwareUnitTestCase
         $course = new Course();
         $course->setCourseName("First course");
         $content->setCourse($course);
-        //$content->setCourseId($courseId);
         
-        $content->setUser(null);
-        //$content->setUserId($userId);
+        $userList = $this->userService->findUser(new User());
+        $content->setUser($userList[0]);
         
         $this->contentService->saveContent($content);
         
@@ -90,7 +96,13 @@ class ContentServiceTest extends ContainerAwareUnitTestCase
         
         // delete
         $course = $contentList[0]->getCourse();
-        $this->contentService->deleteContent($contentList[0]);
+        try
+        {
+            $this->contentService->deleteContent($contentList[0]);
+        }
+        catch(\Exception $exc) 
+        { /* The is no file to delete */ }
+        
         $contentList = $this->contentService->findContent($content);
         $this->assertEquals(0, count($contentList));
         

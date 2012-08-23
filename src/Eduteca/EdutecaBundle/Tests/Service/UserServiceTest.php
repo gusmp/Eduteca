@@ -61,7 +61,7 @@ class UserServiceTest extends ContainerAwareUnitTestCase
     private function checkUserObject(User $user)
     {
         $this->assertEquals($user->getLogin(), $this->userLoginTest);
-        $this->assertEquals($user->getPassword(), $this->userPasswordTest);
+        //$this->assertEquals($user->getPassword(), $this->userPasswordTest);
         $this->assertEquals($user->getName(), $this->userNameTest);
         $this->assertEquals($user->getSurname1(), $this->userSurname1Test);
         $this->assertEquals($user->getSurname2(), $this->userSurname2Test);
@@ -85,16 +85,6 @@ class UserServiceTest extends ContainerAwareUnitTestCase
         
         $this->userService->saveUser($user);
         
-        // test duplicates
-        $userDup = new User();
-        $userDup->setLogin($this->userLoginTest);
-        $userDup->setPassword($this->userPasswordTest.'Dup');
-        $userDup->setName($this->userNameTest."Dup");
-        $userDup->setSurname1($this->userSurname1Test.'Dup');
-        $userDup->setSurname2($this->userSurname2Test.'Dup');
-        $userDup->setApproved($this->userApprovedTest);
-        $userDup->setEmail($this->userMailTest.'Dup');
-        $this->userService->saveUser($userDup);
         
         // recover
         $user = new User();
@@ -102,15 +92,6 @@ class UserServiceTest extends ContainerAwareUnitTestCase
         $userList = $this->userService->findUser($user);
         $this->assertEquals(1, count($userList));
         $this->checkUserObject($userList[0]);
-        
-        // update
-        $this->userLoginTest = $this->userLoginTest.$sufix;
-        $userList[0]->setLogin($this->userLoginTest);
-        $this->userService->saveUser($userList[0]);
-        
-        $user->setLogin($this->userLoginTest);
-        $userList = $this->userService->findUser($user);
-        $this->assertEquals(1, count($userList));
         
         // delete
         $this->userService->deleteUser($userList[0]);

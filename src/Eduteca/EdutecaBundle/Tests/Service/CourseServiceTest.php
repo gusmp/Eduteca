@@ -9,8 +9,6 @@ use Eduteca\EdutecaBundle\Repository\impl\CourseRepositoryImpl;
 use Eduteca\EdutecaBundle\Tests\ContainerAwareUnitTestCase;
 
 
-// d:\Datos\dev_app\apache-2.2.11\htdocs\eduteca>phpunit -c app/ -v src/Eduteca/EdutecaBundle/Tests
-
 class CourseServiceTest extends ContainerAwareUnitTestCase
 {
     /**
